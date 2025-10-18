@@ -191,6 +191,13 @@
 #define SDL_VIDEO_RENDER_SW 1
 #endif
 
+/* Software SDL_Renderer with Android no-EGL backend
+   - creation of software renderer for Android without EGL
+   - {blend,draw}{fillrect,line,point} internal functions */
+#if !defined(SDL_VIDEO_RENDER_ANDROID_SW_NO_EGL) && !defined(SDL_LEAN_AND_MEAN)
+#define SDL_VIDEO_RENDER_ANDROID_SW_NO_EGL 1
+#endif
+
 /* STB image conversion */
 #if !defined(SDL_HAVE_STB) && !defined(SDL_LEAN_AND_MEAN)
 #define SDL_HAVE_STB 1
@@ -216,6 +223,7 @@
 
 #ifdef SDL_RENDER_DISABLED
 #undef SDL_VIDEO_RENDER_SW
+#undef SDL_VIDEO_RENDER_SW_ANDROID_NO_EGL
 #undef SDL_VIDEO_RENDER_D3D
 #undef SDL_VIDEO_RENDER_D3D11
 #undef SDL_VIDEO_RENDER_D3D12

@@ -147,6 +147,9 @@ static const SDL_RenderDriver *render_drivers[] = {
 #ifdef SDL_VIDEO_RENDER_SW
     &SW_RenderDriver,
 #endif
+#ifdef SDL_VIDEO_RENDER_ANDROID_SW_NO_EGL
+    &ANDROID_SW_NO_EGL_RenderDriver,
+#endif
     NULL
 };
 #endif // !SDL_RENDER_DISABLED

@@ -382,6 +382,7 @@ extern SDL_RenderDriver VULKAN_RenderDriver;
 extern SDL_RenderDriver PS2_RenderDriver;
 extern SDL_RenderDriver PSP_RenderDriver;
 extern SDL_RenderDriver SW_RenderDriver;
+extern SDL_RenderDriver ANDROID_SW_NO_EGL_RenderDriver;
 extern SDL_RenderDriver VITA_GXM_RenderDriver;
 extern SDL_RenderDriver GPU_RenderDriver;
 
